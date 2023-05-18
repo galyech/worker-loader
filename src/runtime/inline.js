@@ -31,9 +31,7 @@ module.exports = (content, workerConstructor, workerOptions, url) => {
         objectURL,
         workerOptions
       );
-
-      URL.revokeObjectURL(objectURL);
-
+      
       return worker;
     } catch (e) {
       return new globalScope[workerConstructor](
